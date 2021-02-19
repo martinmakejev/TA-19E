@@ -6,11 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Button
-        android:text="Button"
+        android:text="Tavaline kalkulaator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minWidth="25px"
         android:minHeight="25px"
-        android:id="@+id/button1"
+        android:id="@+id/toCalcButton"
+        tools:ignore="HardcodedText" />
+    <Button
+        android:text="Jootraha kalkulaator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/toTipCalcButton"
         tools:ignore="HardcodedText" />
 </LinearLayout>
