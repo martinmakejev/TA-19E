@@ -14,9 +14,9 @@ namespace Calculator
     [Activity(Label = "CalculatorActivity")]
     public class CalculatorActivity : Activity
     {
-        EditText firstEditText;
-        EditText secondEditText;
-        TextView answerText;
+        EditText _firstEditText;
+        EditText _secondEditText;
+        TextView _answerText;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -25,41 +25,18 @@ namespace Calculator
             // Create your application here
             SetContentView(Resource.Layout.calculator_layout);
 
-            firstEditText = FindViewById<EditText>(Resource.Id.firstNumberEditText);
-            secondEditText = FindViewById<EditText>(Resource.Id.secondNumberEditText);
+            _firstEditText = FindViewById<EditText>(Resource.Id.firstNumberEditText);
+            _secondEditText = FindViewById<EditText>(Resource.Id.secondNumberEditText);
             var addButton = FindViewById<Button>(Resource.Id.addButton);
-            var subButton = FindViewById<Button>(Resource.Id.subButton);
-            var mulButton = FindViewById<Button>(Resource.Id.mulButton);
-            var divButton = FindViewById<Button>(Resource.Id.divButton);
-            answerText = FindViewById<TextView>(Resource.Id.answerTextView);
+            _answerText = FindViewById<TextView>(Resource.Id.answerTextView);
 
-            addButton.Click += AddButton_Click;
-            subButton.Click += ButtonSub;
-            mulButton.Click += ButtonMul;
-            divButton.Click += ButtonDiv;
-
+            addButton.Click += AddButton_Click;            
         }
 
         private void AddButton_Click(object sender, EventArgs e)
-        {
-            var answer = int.Parse(firstEditText.Text) + int.Parse(secondEditText.Text);
-            answerText.Text = answer.ToString();
-        }
-
-        void ButtonSub(object sender, EventArgs e)
-        {
-            var answer = int.Parse(firstEditText.Text) - int.Parse(secondEditText.Text);
-            answerText.Text = answer.ToString();
-        }
-        void ButtonMul(object sender, EventArgs e)
-        {
-            var answer = int.Parse(firstEditText.Text) * int.Parse(secondEditText.Text);
-            answerText.Text = answer.ToString();
-        }
-        void ButtonDiv(object sender, EventArgs e)
-        {
-            var answer = int.Parse(firstEditText.Text) / int.Parse(secondEditText.Text);
-            answerText.Text = answer.ToString();
-        }
+        {                                    
+            var answer = int.Parse(_firstEditText.Text) + int.Parse(_secondEditText.Text);
+            _answerText.Text = answer.ToString();
+        }        
     }
 }

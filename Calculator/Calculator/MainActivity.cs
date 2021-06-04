@@ -16,21 +16,22 @@ namespace Calculator
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
-            var calcbutton = FindViewById<Button>(Resource.Id.toCalcButton);
-            var tipCalcbutton = FindViewById<Button>(Resource.Id.toTipCalcButton);
-            calcbutton.Click += Button_Click;
-            tipCalcbutton.Click += TipCalcButton_Click;
-        }
+            var calcButton = FindViewById<Button>(Resource.Id.toCalcButton);
+            var tipCalcButton = FindViewById<Button>(Resource.Id.toTipCalcButton);
 
-        private void Button_Click(object sender, System.EventArgs e)
-        {
-            var intent = new Intent(this, typeof(CalculatorActivity));
-            StartActivity(intent);
+            calcButton.Click += CalcButton_Click;
+            tipCalcButton.Click += TipCalcButton_Click;
         }
 
         private void TipCalcButton_Click(object sender, System.EventArgs e)
         {
             var intent = new Intent(this, typeof(TipcalcActivity));
+            StartActivity(intent);
+        }
+
+        private void CalcButton_Click(object sender, System.EventArgs e)
+        {
+            var intent = new Intent(this, typeof(CalculatorActivity));
             StartActivity(intent);
         }
 

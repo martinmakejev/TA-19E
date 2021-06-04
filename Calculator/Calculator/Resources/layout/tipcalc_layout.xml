@@ -4,32 +4,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <EditText
-        android:inputType="numberDecimal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/subTotalEditText" />
-    <EditText
-        android:inputType="number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tipTextView" />
-    <SeekBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tipSeekBar" />
-    <TextView
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/billTotalTextView" />
-    <TextView
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tipTotalTextView" />
-
+    android:inputType="numberDecimal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:id="@+id/subTotalEditText" />
+  <TextView
+    android:text="0"
+    android:inputType="number"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/tipTextView" />
+  <SeekBar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/tipSeekBar" />
+  <Button
+    android:text="@string/Arvuta"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/button1" />
+  <TextView
+    android:text="@string/Koguarve"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+  <TextView
+    android:text=""
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/billTotalTextView"/>
+  <TextView
+  android:text="@string/Jootraha"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"/>
+  <TextView
+    android:text=""
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/tipTotalTextView" />
 </LinearLayout>
