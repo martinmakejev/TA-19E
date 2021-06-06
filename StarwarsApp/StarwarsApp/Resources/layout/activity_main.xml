@@ -16,7 +16,8 @@
         android:text="@string/ships"
         android:layout_width="195dp"
         android:layout_height="170dp"
-        android:layout_toRightOf="@+id/peopleButton"
+        android:layout_below="@+id/planetsButton"
+        android:layout_toRightOf="@+id/filmsButton"
         android:id="@+id/starshipsButton" />
     <Button
         android:text="@string/films"
@@ -28,7 +29,6 @@
         android:text="@string/planets"
         android:layout_width="195dp"
         android:layout_height="170dp"
-        android:layout_below="@+id/shipsButton"
         android:layout_toRightOf="@+id/filmsButton"
         android:id="@+id/planetsButton" />
 </RelativeLayout>

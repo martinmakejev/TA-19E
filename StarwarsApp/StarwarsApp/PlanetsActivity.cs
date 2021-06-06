@@ -32,7 +32,7 @@ namespace StarwarsApp
             planetsdata = await remoteDataService.GetStarwarsPlanets();
 
             var planetslistview = FindViewById<ListView>(Resource.Id.planetsListView);
-            planetslistview.Adapter = new PlanetAdapter(this, planetsdata.results);
+            planetslistview.Adapter = new PlanetsAdapter(this, planetsdata.results);
             planetslistview.ItemClick += OnListItemClick;
         }
         private void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)

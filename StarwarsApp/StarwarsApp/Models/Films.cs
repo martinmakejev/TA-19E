@@ -15,6 +15,6 @@ namespace StarwarsApp.Models
         public int count { get; set; }
         public string next { get; set; }
         public object previous { get; set; }
-        public List<PeopleDetails> results { get; set; }
+        public List<FilmsDetails> results { get; set; }
     }
 }

@@ -31,7 +31,7 @@ namespace StarwarsApp
             var remoteDataService = new RemoteDataService();
             peopledata = await remoteDataService.GetStarwarsPeople();
 
-            var peoplelistview = FindViewById<ListView>(Resource.Id.peoplelistView);
+            var peoplelistview = FindViewById<ListView>(Resource.Id.peopleListView);
             peoplelistview.Adapter = new PeopleAdapter(this, peopledata.results);
             peoplelistview.ItemClick += OnListItemClick;
         }
